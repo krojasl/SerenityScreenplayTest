@@ -1,6 +1,6 @@
 package co.com.screenplay.project.stepdefinitions;
 
-import cucumber.api.java.Before;
+import co.com.screenplay.project.questions.ProvPyCQuestion;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -25,7 +25,6 @@ public class ProveedoresPyCStepDef {
 
     public String roleUserPyC;
 
-    @Before
     @Given("^abre sitio web de plataforma rimac a PyC$")
     public void abreSitioWebDePlataformaRimacAPyC() {
         System.out.println("Proveedores PyC Step - 1");
@@ -66,7 +65,9 @@ public class ProveedoresPyCStepDef {
     @Then("^visualizar las funcionalidades del rol para este modulo Proveedores P&C$")
     public void visualizarLasFuncionalidadesDelRolParaEsteModuloProveedoresPC() {
         System.out.println("Proveedores PyC Step - 9");
-
+        theActorInTheSpotlight().should(
+                seeThat(ProvPyCQuestion.validarCCondicionesPyC(roleUserPyC))
+        );
         System.out.println("Proveedores PyC Step - 10");
     }
 

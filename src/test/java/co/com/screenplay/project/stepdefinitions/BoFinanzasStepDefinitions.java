@@ -67,7 +67,7 @@ public class BoFinanzasStepDefinitions {
     public void visualizarLasFuncionalidadesDelRolParaEsteModuloFinanzas(){
         System.out.println("BO_FINANZAS Step - 11");
         theActorInTheSpotlight().should(
-                seeThat(BoFinanzasQuestions.witchParameters(roleUser))
+                seeThat(BoFinanzasQuestions.validarCondicionesFinanzas(roleUser))
         );
         System.out.println("BO_FINANZAS Step FINISH - 12 "+"- "+roleUser);
     }

@@ -1,18 +1,13 @@
 package co.com.screenplay.project.questions;
 
-import com.intuit.karate.driver.WebDriver;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-
 import static co.com.screenplay.project.ui.BoFinanzasUi.*;
 import static co.com.screenplay.project.utils.BoFinanzas.TITLE_HOME_FINANZAS;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
@@ -152,7 +147,7 @@ public class BoFinanzasQuestions implements Question<Boolean> {
         } else return false;
     }
 
-    public static BoFinanzasQuestions witchParameters(String rolUsuario) {
+    public static BoFinanzasQuestions validarCondicionesFinanzas(String rolUsuario) {
         roleUsuario = rolUsuario;
         System.out.println("BoFinanzasQuestions - 1 " + roleUsuario);
         return new BoFinanzasQuestions(roleUsuario);

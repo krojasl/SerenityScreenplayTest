@@ -30,22 +30,11 @@ public class ProveedoresPyCWhenTask implements Task {
                 Click.on(BTN_INICIAR_SESION_PYC)
         );
         // --- INICIO DE LA ESPERA DE 1 MINUTOS ---
-        System.out.println("Esperando 1 minutos...");
+        System.out.println("Esperando aprox 3 minutos...");
         waiting(210); //
-        System.out.println("Espera de 1 minutos finalizada when.");
+        System.out.println("Esperando aprox 3 minutos finalizada WHEN");
         // --- FIN DE LA ESPERA DE 2 MINUTOS ---
         //DESPUES DE AQUI PIDE CODIGO QUE LLEGA AL CORREO PARA PODER
-        //VALIDAR LAS OPCIONES SIGUIENTES, POR AHORA COLOCARE UNA ESPERA
-        actor.attemptsTo(
-                WaitUntil.the(BTN_VALIDATION, isEnabled()).forNoMoreThan(30).seconds(), //AQUI coloco el codigo mientras se cumple esta espera
-                Click.on(BTN_VALIDATION),
-                WaitUntil.the(BTN_FIST_PYC, isEnabled()).forNoMoreThan(30).seconds(), //AQUI coloco el codigo mientras se cumple esta espera
-                Click.on(BTN_FIST_PYC),
-                Click.on(BTN_SECOND_PYC),
-                Click.on(BTN_GESTION_SAL_VEH)
-        );
-
-
         System.out.println("PYC WHEN TASK - 3");
     }
 
@@ -54,5 +43,4 @@ public class ProveedoresPyCWhenTask implements Task {
         System.out.println("PYC WHEN - 01");
         return Tasks.instrumented(ProveedoresPyCWhenTask.class);
     }
-
 }
