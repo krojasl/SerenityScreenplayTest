@@ -34,7 +34,7 @@ public class BoFinanzasAndRolUsuarioTask implements Task {
         actor.attemptsTo(
                 Open.url(urlSecurity),
                 Click.on(BTN_INICIO_SESION_SECURITY),
-                BoFinanzasAndTask.accessLogin(),
+                LoginBase.accessLogin(),
                 Click.on(BTN_GESTION_PLATAFORMA),
                 Click.on(BTN_MANTTO_USUARIOS),
                 Click.on(BTN_FILTRAR),

@@ -7,11 +7,9 @@ import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.questions.Value;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.screenplay.project.ui.BoFinanzasUi.BTN_ESPEC_VAL_SOAT_SUB12;
 import static co.com.screenplay.project.ui.BoSecurityUi.*;
 import static co.com.screenplay.project.ui.ProveedoresPyCUi.*;
 import static co.com.screenplay.project.utils.BoFinanzas.CORREO;
-import static co.com.screenplay.project.utils.BoSecurity.urlSecurity;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
@@ -34,7 +32,7 @@ public class ProveedoresPyCAndTask  implements Task {
         actor.attemptsTo(
                 Click.on(BTN_BO_Security),
                 Click.on(BTN_INICIO_SESION_SECURITY),
-                BoFinanzasAndTask.accessLogin(),
+                LoginBase.accessLogin(),
                 Click.on(BTN_GESTION_PLATAFORMA),
                 Click.on(BTN_MANTTO_USUARIOS),
                 Click.on(BTN_FILTRAR),

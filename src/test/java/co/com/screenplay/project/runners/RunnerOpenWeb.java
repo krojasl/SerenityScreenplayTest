@@ -10,7 +10,7 @@ import cucumber.api.CucumberOptions;
         features = "src/test/resources/features",
         glue = {"co.com.screenplay.project.stepdefinitions"},
         snippets = SnippetType.CAMELCASE,
-        tags = "@BACKOFFICE_RIESGOS",
+        tags = "@BACKOFFICE_PYC",
         plugin = {"pretty"}
 )
 
